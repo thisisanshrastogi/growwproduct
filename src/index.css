@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00D09C;
+  --color-primary-pressed: #00B386;
+  --color-primary-tint: #E6FAF5;
+  --color-primary-dark: #008A67;
+  --color-text-1: #44475B;
+  --color-text-2: #7C7E8C;
+  --color-text-3: #A0A2AD;
+  --color-screen-bg: #FAFAFA;
+  --color-card-bg: #FFFFFF;
+  --color-border: #F0F0F0;
+  --color-page-bg: #FFFFFF;
+  --color-loss: #EB5B3C;
+  --color-loss-tint: #FDEEEA;
+  --color-warning: #F5A623;
+  --color-warning-tint: #FEF6E7;
+  --color-warning-dark: #B45309;
+  --color-toast-bg: #2D3047;
+  --color-liquid: #5B8DEF;
+  --color-hybrid: #F5A623;
+  --color-index: #00D09C;
+  --color-stocks: #2D3047;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --shadow-card: 0 1px 3px rgba(16, 24, 40, 0.06);
+  --shadow-sheet: 0 -8px 24px rgba(16, 24, 40, 0.12);
+
+  --radius-card: 16px;
+  --radius-button: 12px;
+  --radius-input: 12px;
+  --radius-chip: 9999px;
+  --radius-sheet: 24px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-page-bg);
+  color: var(--color-text-1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  @keyframes fade-in-up {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.3s ease-out forwards;
+  }
+}
